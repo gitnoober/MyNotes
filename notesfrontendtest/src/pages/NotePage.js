@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const NotePage = ({ match, history }) => {
-    
+
     let {authTokens} = useContext(AuthContext)
     let noteIdd = match.params.id
     let [noteId, setNoteId] = useState(noteIdd)
@@ -37,7 +37,7 @@ const NotePage = ({ match, history }) => {
         }
         console.log("get note function invoked", note)
     }
-    
+
 
     let updateNote = async ()=> {
         fetch(`/api/notes/${noteId}/update/`,{
@@ -70,7 +70,7 @@ const NotePage = ({ match, history }) => {
         if (!note.body){
             deleteNote()
         } else {
-            updateNote()    
+            updateNote()
         }
         history.push('/')
     }
@@ -92,14 +92,14 @@ const NotePage = ({ match, history }) => {
                     <h3>
                         <ArrowLeft onClick={handleSubmit} />
                     </h3>
-                    
+
                     <button onClick={deleteNote}>Delete</button>
                 </div>
                 <textarea onChange={(e) => { handleChange(e.target.value) }} value={note?.body}></textarea>
             </div>
         )
     }
-    
+
 };
 
 export default NotePage;

@@ -38,7 +38,7 @@ export const AuthProvider =({children}) => {
             // console.log("userrr", user)
         } else {
             alert('Something went wrong!')
-            
+
         }
         // console.log('data:', response)
     }
@@ -92,20 +92,20 @@ export const AuthProvider =({children}) => {
                     toast.error(data.password[i])
                 }
             } catch (e){
-                
+
             }
             try {
                 if (data.username.length > 0){
-                    toast.error('Username must be unique!')    
+                    toast.error('Username must be unique!')
                 }
             } catch (e){
 
             }
-            
-            
+
+
         }
-        
-        
+
+
     }
 
 

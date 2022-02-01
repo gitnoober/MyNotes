@@ -32,7 +32,7 @@ const LoginPage = () => {
               name="password1"
               />
             </div>
-            
+
             <div className="formField">
               <button className="formFieldButton">Sign In</button>{" "}
               <Link to="/register" className="formFieldLink">

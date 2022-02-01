@@ -11,7 +11,7 @@ import { Redirect, Link } from 'react-router-dom';
 //             <input type="text" name="username" placeholder='Enter Username' />
 //             <input type="password" name="password1" placeholder='Enter Password' />
 //             <input type="password" name="password2" placeholder='Confirm Password' />
-//             <button type="submit" value="login">Submit</button> 
+//             <button type="submit" value="login">Submit</button>
 //         </form>
 //     </div>;
 //   }
@@ -52,7 +52,7 @@ const RegisterPage =()=>{
           name="password1"
           />
         </div>
-        
+
         <div className='formField'>
           <label className='formFieldLabel' htmlFor="password">
             Re-Enter Password
@@ -65,7 +65,7 @@ const RegisterPage =()=>{
           name="password2"
           />
         </div>
-        
+
         <div className="formField">
             <button className="formFieldButton">Sign Up</button>{" "}
             <Link to="/login" className="formFieldLink">

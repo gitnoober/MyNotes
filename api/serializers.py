@@ -19,7 +19,8 @@ class RegisterSerializer(serializers.ModelSerializer):
     # )
 
     username = serializers.CharField(
-        required=True, validators=[UniqueValidator(queryset=User.objects.all())]
+        required=True,
+        validators=[UniqueValidator(queryset=User.objects.all())],
     )
 
     password = serializers.CharField(

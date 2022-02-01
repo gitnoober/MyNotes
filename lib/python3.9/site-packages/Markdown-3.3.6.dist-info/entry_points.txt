@@ -20,4 +20,3 @@ smarty = markdown.extensions.smarty:SmartyExtension
 tables = markdown.extensions.tables:TableExtension
 toc = markdown.extensions.toc:TocExtension
 wikilinks = markdown.extensions.wikilinks:WikiLinkExtension
-

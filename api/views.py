@@ -1,17 +1,8 @@
-from django.contrib import messages
-from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
-from django.contrib.auth.views import LoginView
-from django.shortcuts import redirect, render
-from django.urls import reverse_lazy
-from django.views.generic.edit import FormView
-from rest_framework import generics, status
+from rest_framework import generics
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
-from rest_framework.views import APIView
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 
@@ -133,4 +124,3 @@ def deleteNote(request, pk):
     note = user.note_set.filter(id=pk).first()
     note.delete()
     return Response("Note was Deleted!")
-

@@ -22,7 +22,7 @@ const HomePage = () => {
     })
     let data = await response.json()
     if (response.status === 200){
-      setNotes(data)  
+      setNotes(data)
     }else if (response.statusText === 'Unauthorized'){
       logoutUser()
     }
@@ -32,7 +32,7 @@ const HomePage = () => {
   }
 
 
-  
+
   return (
     <div className='notes'>
         <div className='notes-header'>
@@ -45,7 +45,7 @@ const HomePage = () => {
             <ListItem key={index} note={note}/>
           ))}
         </div>
-        
+
         <div>
           <AddButton/>
         </div>
