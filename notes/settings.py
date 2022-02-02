@@ -28,10 +28,7 @@ if os.path.isfile(dotenv_file):
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = (
-    "django-insecure-m_6t43bu92v#w*7ad0ny1a*-es0*%xy%bb$f!ak0j65%cjmp52"
-)
-
+SECRET_KEY = "django-insecure-m_6t43bu92v#w*7ad0ny1a*-es0*%xy%bb$f!ak0j65%cjmp52"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -107,7 +104,7 @@ ROOT_URLCONF = "notes.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "notesfrontendtest/build"],
+        "DIRS": [os.path.join(BASE_DIR, "build")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -168,9 +165,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
 
-STATICFILES_DIRS = [BASE_DIR / "notesfrontendtest/build/static"]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "build/static")]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
